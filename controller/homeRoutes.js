@@ -39,6 +39,10 @@ router.get('/blogpost/:id', async (req, res) => {
                 },
                 {
                     model: Comment,
+                    include: [{
+                        model: User,
+                        attributes: ['name']
+                    }],
                 }
             ],
         });
