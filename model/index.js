@@ -31,7 +31,7 @@ BlogPost.hasMany(Comment, {
 });
 
 //but Comments only has ONE BlogPost
-Comment.belongsTo(BlogPOst, {
+Comment.belongsTo(BlogPost, {
     foreignKey: 'blogpost_id',
 });
 
