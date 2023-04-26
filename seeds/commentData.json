@@ -1,0 +1,52 @@
+[
+    {
+        "comment": "If you can't count on Sequelize, what the hell can you count on?",
+        "user_id": 1,
+        "blogpost_id": 2
+    },
+    {
+        "comment": "👍",
+        "user_id": 2,
+        "blogpost_id": 4
+    },
+    {
+        "comment": "Great post! It was surprisingly informative.",
+        "user_id": 2,
+        "blogpost_id": 1
+    },
+    {
+        "comment": "Your post was informative.",
+        "user_id": 2,
+        "blogpost_id": 3
+    },
+    {
+        "comment": "👍👍",
+        "user_id": 2,
+        "blogpost_id": 4
+    },
+    {
+        "comment": "Interesting!",
+        "user_id": 3,
+        "blogpost_id": 1
+    },
+    {
+        "comment": "👍👍👍",
+        "user_id": 3,
+        "blogpost_id": 4
+    },
+    {
+        "comment": "What a great post! I learned so much about MVC, and I can't wait to utilize it for my next coding project. ☺️☺️",
+        "user_id": 4,
+        "blogpost_id": 1
+    },
+    {
+        "comment": "Reading your post reminds me how, back in St. Olaf, the Toppelkopper Triplets tried making a website. Except, they got the directories confused, and navigating the repo was like playing ugel and flugel.",
+        "user_id": 4,
+        "blogpost_id": 2
+    },
+    {
+        "comment": "I loved your post. Back in St. Olaf, Gretchen Lillehammer used coding to create a website for the public library.",
+        "user_id": 4,
+        "blogpost_id": 3
+    }
+]
