@@ -1,0 +1,22 @@
+[
+    {
+        "title": "Organizing Your Code with MVC",
+        "content": "Picture it: Sicily 1922. An attractive peasant girl who has saved her lira set out to create an application for her pizza empire. She's stumped. Files are everywhere. What can she do? She organizes her files using the MVC structure.",
+        "user_id": 1
+    },
+    {
+        "title": "Sequelize Models: Organizing Your Data Like a Pro",
+        "content": "Sequelize is an ORM library that allows you to map database tables to JavaScript objects. To create a Sequelize model, you'll need to define the fields for your data and the relationships between your tables.",
+        "user_id": 2
+    },
+    {
+        "title": "Coding: A Southern Belle's Guide to Mastering Technology",
+        "content": "Hello, darlings! I have been keeping up with the latest trends, and I've found that coding is a lot like a good mint julep - a little sweet, a little strong, and just what you need to get things done.",
+        "user_id": 3
+    },
+    {
+        "title": "Handlebars: The Magical Way to Create Templates",
+        "content": " In St. Olaf, we know how important it is to make things look nice and organized, and handlebars does just that. It's as simple as following the recipe for Pickled Herring Pie! You can use handlebars to display a list of lutefisk recipes, or to update...",
+        "user_id": 4
+    }
+]
