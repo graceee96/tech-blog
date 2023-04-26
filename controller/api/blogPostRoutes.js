@@ -23,7 +23,8 @@ router.put('/:id', withAuth, async (req, res) => {
     try {
         const blogPostData = await BlogPost.update(req.body, {
             where: {
-                id: req.params.id
+                id: req.params.id,
+                user_id: req.session.user_id
             },
         })
 
@@ -32,10 +33,7 @@ router.put('/:id', withAuth, async (req, res) => {
             return;
         };
 
-        res.status(200).json({
-            message: 'Post has been updated!',
-            data: blogPostData,
-        })
+        res.status(200).json(blogPostData);
     } catch (err) {
         console.log(err);
         res.status(500).json(err);
@@ -56,10 +54,7 @@ router.delete('/:id', withAuth, async (req, res) => {
             res.status(404).json({ message: 'No post found with this id!' });
         };
 
-        res.status(200).json({
-            message: 'Post has been deleted!',
-            data: blogPostData,
-        })
+        res.status(200).json(blogPostData);
     } catch (err) {
         console.log(err);
         res.status(500).json(err);
