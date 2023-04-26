@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, BlogPost, Comment } = require('../models');
+const { User, BlogPost, Comment } = require('../model');
 const withAuth = require('../utils/auth');
 
 //GET - render all BlogPosts + associated User on homepage
@@ -95,3 +95,5 @@ router.get('/signup', (req, res) => {
     
     res.render('signup');
 })
+
+module.exports = router;
