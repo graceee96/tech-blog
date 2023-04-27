@@ -1,18 +1,18 @@
 [
     {
-        "name": "picture_it_sophia",
+        "username": "picture_it_sophia",
         "password": "pizza1234"
     },
     {
-        "name": "bigmean_dorothy",
+        "username": "bigmean_dorothy",
         "password": "password1234"
     },
     {
-        "name": "blanche_forever45",
+        "username": "blanche_forever45",
         "password": "password1234"
     },
     {
-        "name": "rose_of_stolaf",
+        "username": "rose_of_stolaf",
         "password": "password"
     }
 ]
