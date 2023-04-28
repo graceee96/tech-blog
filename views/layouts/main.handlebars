@@ -29,10 +29,10 @@
                 <nav class="px-4 mx-auto">
                     <div id="user-links" class="d-flex justify-content-between px-5 py-4">
                         {{#if logged_in}}
+                        <a class="navlink1 my-4">LOG OUT.</a>
+                        {{else}}
                         <a href="/login" class="navlink1 my-4">LOG IN.</a>
                         <a href="/signup" class="navlink1 my-4">SIGN UP.</a>
-                        {{else}}
-                        <a class="navlink1 my-4">LOG OUT.</a>
                         {{/if}}
                     </div>
 
