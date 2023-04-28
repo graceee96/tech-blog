@@ -9,19 +9,19 @@ router.get('/', async (req, res) => {
             include: [
                 {
                     model: User,
-                    attributes: ['name']
+                    attributes: ['username']
                 },
             ],
         });
 
         const posts = postData.map((post) => post.get({ plain: true }));
 
-        res.json(posts);
+        // res.json(posts);
 
-        // res.render('homepage', {
-        //     posts,
-        //     logged_in: req.session.logged_in
-        // });
+        res.render('homepage', {
+            posts,
+            logged_in: req.session.logged_in
+        });
     } catch (err) {
         console.log(err);
         res.status(500).json(err);
@@ -35,13 +35,13 @@ router.get('/blogpost/:id', async (req, res) => {
             include: [
                 {
                     model: User,
-                    attributes: ['name'],
+                    attributes: ['username'],
                 },
                 {
                     model: Comment,
                     include: [{
                         model: User,
-                        attributes: ['name']
+                        attributes: ['username']
                     }],
                 }
             ],
