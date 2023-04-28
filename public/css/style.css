@@ -1,4 +1,94 @@
 :root {
     --backgroung-color: #FDF9F9;
     --the-color: #5F7161;
+    --logo: 'Space Mono', monospace;
+    --bold: 700;
+    --semibold: 600;
+    --medium: 500;
+    --regular: 400;
+    --light: 300;
+}
+
+* {
+    font-family: 'Space Grotesk', sans-serif;
+    color: var(--the-color)
+}
+
+body {
+    background-color: var(--backgroung-color);
+}
+
+
+
+main {
+    border: 2px solid cyan;
+}
+
+a {
+    color: var(--the-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--the-color)
+}
+
+/* navbar */
+header {
+    /* padding: 3%; */
+    border: 2px solid red;
+}
+nav {
+    width: 85%;
+}
+
+nav div {
+    display: block;
+    margin: 0 auto;
+}
+
+#logo {
+    /* margin-left: 1.75vw; */
+    font-family: var(--logo);
+    font-size: 4.25vw;
+}
+
+#user-links {
+    border-bottom: 2.5px solid var(--the-color);
+}
+
+.navlink1 {
+    font-weight: var(--light);
+    font-size: 2vw;
+}
+
+.navlink2 {
+    font-weight: var(--regular);
+    font-size: 3vw;
+}
+
+/* homepage */
+.one-post {
+    border-bottom: 2.5px solid var(--the-color);
+}
+
+.post-title {
+    /* border: 1px solid yellow; */
+    width: 70%;
+}
+
+.post-title h2 {
+    font-size: 3.25vw;
+    font-weight: var(--bold);
+}
+
+.post-info {
+    /* border: 1px solid orange; */
+    width: 30%;
+    text-align: end;
+}
+
+.post-info .post-writer {
+    font-weight: var(--medium);
+    font-size: 1.3vw;
 }
