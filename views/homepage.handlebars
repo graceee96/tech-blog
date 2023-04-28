@@ -6,9 +6,9 @@
                 <div class="post-title">
                     <h2><a href="/blogpost/{{post.id}}">{{post.title}}</a></h2>
                 </div>
-                <div class="post-info">
+                <div class="post-info d-flex flex-column justify-content-end">
                     <p class="post-writer mb-1">{{post.user.username}}</p>
-                    <p class="post-date mb-0">{{format_date post.date_created}}</p>
+                    <p class="post-date mb-2">{{format_date post.date_created}}</p>
                 </div>
             </div>
         </div>
