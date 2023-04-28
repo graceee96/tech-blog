@@ -1,8 +1,4 @@
 module.exports = {
-    format_time: (date) => {
-        return date.toLocaleTimeString();
-    },
-    
     format_date: (date) => {
         const inputDate = new Date(date);
 
@@ -10,6 +6,6 @@ module.exports = {
         const day = inputDate.getDate();
         const year = date.getFullYear();
 
-    return `${year}. ${month}. ${day}`;
+        return `${year}. ${month}. ${day}`;
     }
 };

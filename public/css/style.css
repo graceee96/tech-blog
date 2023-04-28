@@ -7,6 +7,7 @@
     --medium: 500;
     --regular: 400;
     --light: 300;
+    --line: 2.5px solid var(--the-color);
 }
 
 * {
@@ -54,7 +55,7 @@ nav div {
 }
 
 #user-links {
-    border-bottom: 2.5px solid var(--the-color);
+    border-bottom: var(--line);
 }
 
 .navlink1 {
@@ -69,7 +70,7 @@ nav div {
 
 /* homepage */
 .one-post {
-    border-bottom: 2.5px solid var(--the-color);
+    border-bottom: var(--line);
 }
 
 .post-title {
@@ -91,4 +92,31 @@ nav div {
 .post-info .post-writer {
     font-weight: var(--medium);
     font-size: 1.3vw;
+}
+
+/* login/signup */
+#login {
+    padding: 25% 15%;
+}
+.login-form h2 {
+    font-size: 4vw;
+    font-weight: var(--semibold);
+}
+
+.lisu-label {
+    font-size: 3.25vw;
+    font-weight: var(--medium);
+}
+
+.lisu-input {
+    border: var(--line);
+    background-color: transparent;
+    font-size: 2.25vw;
+}
+
+.lisu-btn {
+    border: var(--line);
+    background-color: var(--the-color);
+    color: var(--backgroung-color);
+    font-size: 2.25vw;
 }
