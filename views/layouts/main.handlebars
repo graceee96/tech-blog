@@ -29,7 +29,7 @@
                 <nav class="px-4 mx-auto">
                     <div id="user-links" class="d-flex justify-content-between px-5 py-4">
                         {{#if logged_in}}
-                        <a class="navlink1 my-4">LOG OUT.</a>
+                        <a id="logout" class="navlink1 my-4">LOG OUT.</a>
                         {{else}}
                         <a href="/login" class="navlink1 my-4">LOG IN.</a>
                         <a href="/signup" class="navlink1 my-4">SIGN UP.</a>
@@ -38,9 +38,7 @@
 
                     <div id="web-links" class="d-flex flex-column mt-4 px-5 py-4">
                         <a href="/" class="navlink2 mb-3">HOME</a>
-                        {{#if logged_in}}
                         <a href="/dashboard" class="navlink2">DASHBOARD</a>
-                        {{/if}}
                     </div>
                 </nav>
             </header>
