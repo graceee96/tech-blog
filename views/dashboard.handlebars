@@ -1,0 +1,23 @@
+<section id="dashboard">
+    <h2>Hello, {{user.username}}!</h2>
+    <h3>↓ Here are your posts.</h3>
+
+    <div id="post-list">
+        {{#each user.blog_posts as |post|}}
+        <div class="one-post">
+            <div class="d-flex justify-content-between py-3">
+                <div class="post-title">
+                    <h2><a href="/blogpost/{{post.id}}">{{post.title}}</a></h2>
+                </div>
+                <div class="post-info d-flex flex-column justify-content-end">
+                    <p class="post-date mb-2">{{format_date post.date_created}}</p>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+        <div>
+            <a href="/new-post"><button class="new-btn w-100 py-2">+ new post.</button></a>
+        </div>
+    </div>
+
+</section>

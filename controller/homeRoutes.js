@@ -71,12 +71,12 @@ router.get('/dashboard', withAuth, async (req, res) => {
 
         const user = userData.get({ plain: true });
 
-        res.json(user);
+        // res.json(user);
 
-        // res.render('dashboard', {
-        //     ...user,
-        //     logged_in: true
-        // });
+        res.render('dashboard', {
+            ...user,
+            logged_in: true
+        });
     } catch (err) {
         console.log(err);
         res.status(500).json(err);
@@ -87,7 +87,8 @@ router.get('/login', (req, res) => {
     if (req.session.logged_in) {
         res.redirect('/');
         return;
-    }
+    };
+
     res.render('login');
 });
 
@@ -98,6 +99,15 @@ router.get('/signup', (req, res) => {
     };
     
     res.render('signup');
+})
+
+router.get('/new-post', (req, res) => {
+    if (!req.session.logged_in) {
+        res.redirect('/login');
+        return;
+    };
+
+    res.render('addPost');
 })
 
 module.exports = router;

@@ -19,8 +19,6 @@ body {
     background-color: var(--backgroung-color);
 }
 
-
-
 main {
     border: 2px solid cyan;
 }
@@ -56,6 +54,10 @@ nav div {
 
 #user-links {
     border-bottom: var(--line);
+}
+
+#logout {
+    cursor: pointer;
 }
 
 .navlink1 {
@@ -98,8 +100,7 @@ nav div {
 #login, #signup {
     padding: 20% 10%;
 }
-.login-form h2,
-.signup-form h2 {
+.form-title {
     font-size: 4vw;
     font-weight: var(--semibold);
 }
@@ -129,4 +130,19 @@ nav div {
 .lisu-btn:hover {
     background-color: transparent;
     color: var(--the-color);
+}
+
+/* dashboard */
+.new-btn {
+    border: var(--line);
+    border-left: none;
+    border-right: none;
+    background-color: transparent;
+    font-size: 2.75vw;
+    font-weight: var(--bold);
+}
+
+.new-btn:hover {
+    background-color: var(--the-color);
+    color: var(--backgroung-color);
 }

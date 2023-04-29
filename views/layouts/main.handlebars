@@ -24,19 +24,19 @@
     <div class="container-fluid">
         <div class="row">
             <header class="col-5 min-vh-100 p-4">
-                <h1 id="logo">TECH/MANIFESTO</h1>
+                <h1 id="logo"><a href="/">TECH BLOG</a></h1>
 
                 <nav class="px-4 mx-auto">
                     <div id="user-links" class="d-flex justify-content-between px-5 py-4">
                         {{#if logged_in}}
-                        <a id="logout" class="navlink1 my-4">LOG OUT.</a>
+                        <a id="logout" class="navlink1 my-">LOG OUT.</a>
                         {{else}}
-                        <a href="/login" class="navlink1 my-4">LOG IN.</a>
-                        <a href="/signup" class="navlink1 my-4">SIGN UP.</a>
+                        <a href="/login" class="navlink1 my-3">LOG IN.</a>
+                        <a href="/signup" class="navlink1 my-3">SIGN UP.</a>
                         {{/if}}
                     </div>
 
-                    <div id="web-links" class="d-flex flex-column mt-4 px-5 py-4">
+                    <div id="web-links" class="d-flex flex-column mt-3 px-5 py-4">
                         <a href="/" class="navlink2 mb-3">HOME</a>
                         <a href="/dashboard" class="navlink2">DASHBOARD</a>
                     </div>
