@@ -2,12 +2,12 @@
     <h2>Hello, {{user.username}}!</h2>
     <h3>↓ Here are your posts.</h3>
 
-    <div id="post-list">
+    <div id="my-posts" class="mt-5">
         {{#each user.blog_posts as |post|}}
         <div class="one-post">
             <div class="d-flex justify-content-between py-3">
                 <div class="post-title">
-                    <h2><a href="/blogpost/{{post.id}}">{{post.title}}</a></h2>
+                    <h4><a href="/blogpost/{{post.id}}">{{post.title}}</a></h4>
                 </div>
                 <div class="post-info d-flex flex-column justify-content-end">
                     <p class="post-date mb-2">{{format_date post.date_created}}</p>

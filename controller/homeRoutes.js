@@ -105,4 +105,8 @@ router.get('/new-post', withAuth, (req, res) => {
     res.render('addPost', { logged_in: true });
 })
 
+router.get('/edit-post', withAuth, (req, res) => {
+    res.render('editPost', { logged_in: true })
+})
+
 module.exports = router;
