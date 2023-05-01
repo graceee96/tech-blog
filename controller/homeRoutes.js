@@ -74,7 +74,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
         // res.json(user);
 
         res.render('dashboard', {
-            ...user,
+            user,
             logged_in: true
         });
     } catch (err) {
@@ -101,13 +101,8 @@ router.get('/signup', (req, res) => {
     res.render('signup');
 })
 
-router.get('/new-post', (req, res) => {
-    if (!req.session.logged_in) {
-        res.redirect('/login');
-        return;
-    };
-
-    res.render('addPost');
+router.get('/new-post', withAuth, (req, res) => {
+    res.render('addPost', { logged_in: true });
 })
 
 module.exports = router;
