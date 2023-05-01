@@ -1,18 +1,17 @@
 <section class="p-5">
-    <div id="post-list">
+    <table id="post-list">
         {{#each posts as |post|}}
-        <div class="one-post">
-            <div class="d-flex justify-content-between py-3">
-                <div class="post-title">
+        <tbody>
+            <tr class="one-post">
+                <td class="post-title p-3">
                     <h2><a href="/blogpost/{{post.id}}">{{post.title}}</a></h2>
-                </div>
-                <div class="post-info d-flex flex-column justify-content-end">
+                </td>
+                <td class="post-info d-flex flex-column justify-content-end">
                     <p class="post-writer mb-1">{{post.user.username}}</p>
                     <p class="post-date mb-2">{{format_date post.date_created}}</p>
-                </div>
-            </div>
-        </div>
+                </td>
+            </tr>
+        </tbody>
         {{/each}}
-    </div>
-    
+    </table>
 </section>
