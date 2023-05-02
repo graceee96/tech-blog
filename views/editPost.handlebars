@@ -1,0 +1,20 @@
+<section id="edit-post" class="p-5">
+    <form class="addpost-form">
+        <h2 class="mb-5 form-title">Edit your post here.</h2>
+
+        <div class="mb-4">
+            <label for="editpost-title" class="lisu-label d-block mb-2">↓ Your blog title here.</label>
+            <input type="text" id="editpost-title" class="ae-title p-3 w-100" maxlength="255" value="{{post.title}}">
+        </div>
+
+        <div>
+            <label for="editpost-content" class="lisu-label d-block mb-2">↓ Blog content here.</label>
+            <textarea id="editpost-content" class="ae-content p-3 w-100" maxlength="255" rows="7" wrap="hard">{{post.content}}</textarea>
+            <h5 class="text-end mt-1"><span id="characters">255</span>/255 characters left</h5>
+        </div>
+
+        <button id="editpost-btn" class="lisu-btn w-75 p-2 d-block mt-5 mx-auto">edit post.</button>
+    </form>
+</section>
+
+<script src="/js/editPost.js"></script>

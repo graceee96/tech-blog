@@ -105,31 +105,17 @@ router.get('/new-post', withAuth, (req, res) => {
     res.render('addPost', { logged_in: true });
 })
 
-router.get('/edit-post:id', withAuth, async (req, res) => {
+router.get('/edit-post/:id', withAuth, async (req, res) => {
     try {
-        const postData = await BlogPost.findByPk(req.params.id, {
-            include: [
-                {
-                    model: User,
-                    attributes: ['username'],
-                },
-                {
-                    model: Comment,
-                    include: [{
-                        model: User,
-                        attributes: ['username']
-                    }],
-                }
-            ],
-        });
+        const postData = await BlogPost.findByPk(req.params.id);
 
         const post = postData.get({ plain: true });
 
-        // res.json(post);
+        //res.json(post);
 
         res.render('editPost', {
             post,
-            logged_in: req.session.logged_in
+            logged_in: true
         });
     } catch (err) {
         console.log(err);
