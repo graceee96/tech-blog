@@ -1,17 +1,19 @@
 <section class="p-5">
     <table id="post-list">
-        {{#each posts as |post|}}
+        
         <tbody>
+            {{#each posts as |post|}}
             <tr class="one-post">
                 <td class="post-title px-3 py-2">
                     <h2><a href="/blogpost/{{post.id}}">{{post.title}}</a></h2>
                 </td>
-                <td class="post-info d-flex flex-column justify-content-end">
-                    <p class="post-writer mb-1">{{post.user.username}}</p>
-                    <p class="post-date mb-2">{{format_date post.date_created}}</p>
+                <td class="post-info py-2">
+                    <div class="post-writer mb-1 w-100">{{post.user.username}}</div>
+                    <div class="post-date mb-2 w-100">{{format_date post.date_created}}</div>
                 </td>
             </tr>
+            {{/each}}
         </tbody>
-        {{/each}}
+        
     </table>
 </section>

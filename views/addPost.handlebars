@@ -1,9 +1,20 @@
-<section id="add-post">
+<section id="add-post" class="p-5">
     <form class="addpost-form">
         <h2 class="mb-5 form-title">Add post here.</h2>
 
-        <div>
-
+        <div class="mb-4">
+            <label for="addpost-title" class="lisu-label d-block mb-2">↓ Your blog title here.</label>
+            <input type="text" id="addpost-title" class="ae-title p-3 w-100" maxlength="255">
         </div>
+
+        <div>
+            <label for="addpost-content" class="lisu-label d-block mb-2">↓ Blog content here.</label>
+            <textarea id="addpost-content" class="ae-content p-3 w-100" maxlength="255" rows="7" wrap="hard"></textarea>
+            <h5 class="text-end"><span>255</span>/255 characters left</h5>
+        </div>
+
+        <button class="lisu-btn w-75 p-2 d-block mt-5 mx-auto">+ add new post.</button>
     </form>
 </section>
+
+<script src="/js/addPost.js"></script>

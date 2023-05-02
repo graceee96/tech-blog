@@ -150,9 +150,7 @@ nav div {
 
 .new-btn {
     border: var(--line);
-    border-top: none;
-    border-left: none;
-    border-right: none;
+    border: none;
     background-color: transparent;
     font-size: 2.75vw;
     font-weight: var(--bold);
@@ -161,4 +159,12 @@ nav div {
 .new-btn:hover {
     background-color: var(--the-color);
     color: var(--backgroung-color);
+}
+
+/* add post/edit post form */
+
+.ae-title, .ae-content {
+    border: var(--line);
+    background-color: transparent;
+    font-size: 1.5vw;
 }
