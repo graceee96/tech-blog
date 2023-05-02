@@ -105,7 +105,7 @@ router.get('/new-post', withAuth, (req, res) => {
     res.render('addPost', { logged_in: true });
 })
 
-router.get('/edit-post:id', withAuth, (req, res) => {
+router.get('/edit-post:id', withAuth, async (req, res) => {
     try {
         const postData = await BlogPost.findByPk(req.params.id, {
             include: [
