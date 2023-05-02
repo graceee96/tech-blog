@@ -11,7 +11,7 @@ router.get('/', async (req, res) => {
                     model: User,
                     attributes: ['username']
                 },
-            ],
+            ]
         });
 
         const posts = postData.map((post) => post.get({ plain: true }));
@@ -49,12 +49,12 @@ router.get('/blogpost/:id', async (req, res) => {
 
         const post = postData.get({ plain: true });
 
-        res.json(post);
+        // res.json(post);
 
-        // res.render('blogPost', {
-        //     ...post,
-        //     logged_in: req.session.logged_in
-        // });
+        res.render('blogPost', {
+            post,
+            logged_in: req.session.logged_in
+        });
     } catch (err) {
         console.log(err);
         res.status(500).json(err);
@@ -105,8 +105,36 @@ router.get('/new-post', withAuth, (req, res) => {
     res.render('addPost', { logged_in: true });
 })
 
-router.get('/edit-post', withAuth, (req, res) => {
-    res.render('editPost', { logged_in: true })
+router.get('/edit-post:id', withAuth, (req, res) => {
+    try {
+        const postData = await BlogPost.findByPk(req.params.id, {
+            include: [
+                {
+                    model: User,
+                    attributes: ['username'],
+                },
+                {
+                    model: Comment,
+                    include: [{
+                        model: User,
+                        attributes: ['username']
+                    }],
+                }
+            ],
+        });
+
+        const post = postData.get({ plain: true });
+
+        // res.json(post);
+
+        res.render('editPost', {
+            post,
+            logged_in: req.session.logged_in
+        });
+    } catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+    }
 })
 
 module.exports = router;
