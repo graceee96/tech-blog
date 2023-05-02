@@ -22,6 +22,14 @@ const newPost = async (event) => {
 }
 
 //character counter
+let blogContent = document.getElementById('addpost-content');
+let characters = document.getElementById('characters');
+
+blogContent.addEventListener('input', () => {
+    let charactersLeft = 255 - blogContent.value.length;
+
+    characters.textContent = charactersLeft;
+})
 
 //event listener
 document.querySelector('.addpost-form').addEventListener('submit', newPost);
