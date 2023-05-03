@@ -197,4 +197,46 @@ nav div {
     background-color: transparent;
     color: var(--the-color);
 }
+
 /* blog post */
+.blog-title {
+    font-size: 3.5vw;
+    font-weight: var(--bold);
+}
+
+.blog-info {
+    font-size: 1.75vw;
+    font-weight: var(--light);
+}
+
+.blog-content {
+    font-size: 2.1vw;
+}
+
+#the-blogpost h3 {
+    font-size: 2.8vw;
+    font-weight: var(--semibold);
+}
+
+#comment-list {
+    /* border: 1px solid red; */
+    height: 30vw;
+    overflow: hidden;
+}
+
+#comment-list:hover {
+    overflow-y: auto;
+}
+
+.one-comment {
+    border-bottom: var(--line);
+}
+
+.commenter {
+    font-size: 1.8vw;
+    font-weight: var(--medium);
+}
+
+.comment {
+    font-size: 1.5vw;
+}
