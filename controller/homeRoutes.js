@@ -39,10 +39,7 @@ router.get('/blogpost/:id', async (req, res) => {
                 },
                 {
                     model: Comment,
-                    include: [{
-                        model: User,
-                        attributes: ['username']
-                    }],
+                    include: [{ model: User, attributes: ['username'] }],
                 }
             ],
         });
@@ -60,6 +57,32 @@ router.get('/blogpost/:id', async (req, res) => {
         res.status(500).json(err);
     }
 });
+
+//GET - render BlogPost that I wrote (can edit and delete post)
+router.get('/my-post/:id', withAuth, async (req, res) => {
+    try {
+        const postData = await BlogPost.findByPk(req.params.id, {
+            include: [
+                {
+                    model: Comment,
+                    include: [{ model: User, attributes: ['username'] }]
+                }
+            ],
+        });
+
+        const post = postData.get({ plain: true });
+
+        // res.json(post);
+
+        res.render('myPost', {
+            post,
+            logged_in: req.session.logged_in
+        })
+    } catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+    }
+})
 
 //GET - get 1 User + all associated BlogPosts
 router.get('/dashboard', withAuth, async (req, res) => {
@@ -94,7 +117,7 @@ router.get('/edit-post/:id', withAuth, async (req, res) => {
 
         res.render('editPost', {
             post,
-            logged_in: true
+            logged_in: req.session.logged_in
         });
     } catch (err) {
         console.log(err);
@@ -102,6 +125,7 @@ router.get('/edit-post/:id', withAuth, async (req, res) => {
     }
 })
 
+//render log in form
 router.get('/login', (req, res) => {
     if (req.session.logged_in) {
         res.redirect('/');
@@ -111,6 +135,7 @@ router.get('/login', (req, res) => {
     res.render('login');
 });
 
+//render sign up form
 router.get('/signup', (req, res) => {
     if (req.session.logged_in) {
         res.redirect('/');
@@ -120,8 +145,9 @@ router.get('/signup', (req, res) => {
     res.render('signup');
 })
 
+//renders form to add new post
 router.get('/new-post', withAuth, (req, res) => {
-    res.render('addPost', { logged_in: true });
+    res.render('addPost', { logged_in: req.session.logged_in });
 })
 
 
