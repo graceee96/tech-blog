@@ -10,7 +10,7 @@ const editPost = async (event) => {
 
     const title = document.querySelector('#editpost-title').value.trim();
     const content = document.querySelector('#editpost-content').value.trim();
-    console.log(event.target);
+    // console.log(event.target);
 
     if (event.target.getAttribute('data-postid')) {
         const id = event.target.getAttribute('data-postid');
