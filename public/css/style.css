@@ -19,10 +19,6 @@ body {
     background-color: var(--backgroung-color);
 }
 
-main {
-    border: 2px solid cyan;
-}
-
 a {
     color: var(--the-color);
     text-decoration: none;
@@ -33,10 +29,6 @@ a:hover {
 }
 
 /* navbar */
-header {
-    /* padding: 3%; */
-    border: 2px solid red;
-}
 nav {
     width: 85%;
 }
@@ -187,8 +179,6 @@ nav div {
 .ae-title:focus, .ae-content:focus {
     outline: none;
 }
-
-
 
 /* blog post */
 .blog-title {
