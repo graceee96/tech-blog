@@ -83,6 +83,25 @@ router.get('/dashboard', withAuth, async (req, res) => {
     }
 });
 
+//GET - render page to edit post
+router.get('/edit-post/:id', withAuth, async (req, res) => {
+    try {
+        const postData = await BlogPost.findByPk(req.params.id);
+
+        const post = postData.get({ plain: true });
+
+        //res.json(post);
+
+        res.render('editPost', {
+            post,
+            logged_in: true
+        });
+    } catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+    }
+})
+
 router.get('/login', (req, res) => {
     if (req.session.logged_in) {
         res.redirect('/');
@@ -105,22 +124,5 @@ router.get('/new-post', withAuth, (req, res) => {
     res.render('addPost', { logged_in: true });
 })
 
-router.get('/edit-post/:id', withAuth, async (req, res) => {
-    try {
-        const postData = await BlogPost.findByPk(req.params.id);
-
-        const post = postData.get({ plain: true });
-
-        //res.json(post);
-
-        res.render('editPost', {
-            post,
-            logged_in: true
-        });
-    } catch (err) {
-        console.log(err);
-        res.status(500).json(err);
-    }
-})
 
 module.exports = router;
