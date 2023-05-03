@@ -61,7 +61,7 @@ blogContent.addEventListener('input', () => {
 })
 
 //event listener to edit post
-document.querySelector('#editpost-btn').addEventListener('submit', editPost);
+document.querySelector('.editpost-form').addEventListener('submit', editPost);
 
 //event listener to delete post
 document.querySelector('#deletepost-btn').addEventListener('click', deletePost)
