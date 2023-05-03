@@ -1,53 +1,29 @@
-<section id="my-blogpost">
+<section id="my-blogpost" class="p-4">
 
     <div class="d-flex justify-content-between">
-        <h2 class="w-75">{{post.title}}</h2>
+        <h2 class="blog-title mb-2 w-75">{{post.title}}</h2>
         {{#if logged_in}}
-        <a href="/edit-post/{{post.id}}" id="editpost-btn"><button>edit</button></a>
+        <a href="/edit-post/{{post.id}}" id="editpost-btn"><button class="w-100 postcomment-btn py-1 px-4">edit</button></a>
         {{/if}}
     </div>
 
-    <h4>created by: {{post.user.username}} on {{format_date post.date_created}}</h4>
+    <h4 class="blog-info mb-4">created on {{format_date post.date_created}}</h4>
 
-    <p>{{post.content}}</p>
+    <p class="blog-content mb-5">{{post.content}}</p>
 
     <h3>↓ Comments here.</h3>
 
-    <div id="comment-list">
+    <div id="comment-list" class="p-3">
         <table class="w-100">
             <tbody>
                 {{#each post.comments as |comment|}}
                 <tr class="one-comment">
-                    <td>
-                        <h5>{{comment.user.username}}</h5>
-                        <p>{{comment.comment}}</p>
+                    <td class="p-3">
+                        <h5 class="commenter">{{comment.user.username}}</h5>
+                        <p class="comment mb-0">{{comment.comment}}</p>
                     </td>
-                    {{#if logged_in}}
-                    <td class="d-flex flex-column">
-                        <button data-bs-toggle="collapse" data-bs-target="#editcomment-{{comment.id}}" aria-expanded="false" aria-controls="editComment">edit comment</button>
-                        <button>delete comment</button>
-                    </td>
-                    {{/if}}
-                </tr>
-                <tr class="collapse" id="editcomment-{{comment.id}}">
-                    <td class="w-100" colspan="2">
-                        <label for="comment-{{comment.id}}" class="d-block">↓ Edit comment here.</label>
-                        <textarea id="comment-{{comment.id}}" rows="6" class="d-block w-100">{{comment.comment}}</textarea>
-                        <h5 class="text-end mt-1"><span id="characters">255</span>/255 characters left</h5>
-                        <button class="postcomment-btn">post comment.</button>
-                    </td>
-                </tr>
                 {{/each}}
             </tbody>
         </table>
-    </div>
-
-    <button class="new-btn w-100 py-2" data-bs-toggle="collapse" data-bs-target="#new-comment" aria-expanded="false" aria-controls="new-comment">+ new comment</button>
-
-    <div class="collapse" id="new-comment">
-        <label for="">↓ Add new comment here.</label>
-        <textarea id="comment-{{comment.id}}" rows="6" class="d-block w-100"></textarea>
-        <h5 class="text-end mt-1"><span id="characters">255</span>/255 characters left</h5>
-        <button class="addcomment-btn">add comment.</button>
     </div>
 </section>

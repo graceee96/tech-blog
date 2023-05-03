@@ -9,7 +9,7 @@
 
     <div id="comment-list" class="p-3">
         <table class="w-100">
-            {{!-- {{#if logged_in}} --}}
+            {{#if logged_in}}
             <tbody>
                 {{#each post.comments as |comment|}}
                 <tr class="one-comment">
@@ -18,14 +18,14 @@
 
                         <p class="comment">{{comment.comment}}</p>
                     </td>
-                    <td class="option-btns p-3">
+                    <td class="option-btns p-3" data-commentid="{{comment.id}}">
                         <button class="eddelcomment-btn d-block w-100 p-1 mb-3" data-bs-toggle="collapse" data-bs-target="#editcomment-{{comment.id}}" aria-expanded="false" aria-controls="editComment">edit.</button>
 
                         <button class="eddelcomment-btn d-block w-100 p-1">delete.</button>
                     </td>
                 </tr>
                 <tr class="collapse" id="editcomment-{{comment.id}}">
-                    <td class="w-100 p-3" colspan="2">
+                    <td class="editcomment-form w-100 p-3" colspan="2" data-commentid="{{comment.id}}">
                         <label for="comment-{{comment.id}}" class="eddel-label d-block mb-2">↓ Edit comment here.</label>
 
                         <textarea id="comment-{{comment.id}}" rows="4" class="comment-text d-block w-100 p-3" wrap="hard">{{comment.comment}}</textarea>
@@ -38,7 +38,7 @@
                 {{/each}}
             </tbody>
 
-            {{!-- {{else}}
+            {{else}}
             <tbody>
                 {{#each post.comments as |comment|}}
                 <tr class="one-comment">
@@ -48,7 +48,7 @@
                     </td>
                 {{/each}}
             </tbody>
-            {{/if}} --}}
+            {{/if}}
         </table>
     </div>
 
@@ -60,9 +60,11 @@
 
         <textarea id="comment-{{comment.id}}" rows="4" class="comment-text d-block w-100 p-3" wrap="hard"></textarea>
 
-        <p class="char-count text-end mt-2"><span id="characters">255</span>/255 characters left</p>
+        <p class="char-count text-end mt-2"><span class="characters">255</span>/255 characters left</p>
 
         <button class="postcomment-btn py-1 px-2">add comment.</button>
     </div>
     {{/if}}
 </section>
+
+<script src="/js/comment.js"></script>

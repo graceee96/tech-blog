@@ -217,7 +217,7 @@ nav div {
     font-size: 2.1vw;
 }
 
-#the-blogpost h3 {
+#the-blogpost h3, #my-blogpost h3 {
     font-size: 2.8vw;
     font-weight: var(--bold);
 }
