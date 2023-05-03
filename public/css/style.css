@@ -162,11 +162,23 @@ nav div {
 }
 
 /* add post/edit post form */
-
 .ae-title, .ae-content {
     border: var(--line);
     background-color: transparent;
     font-size: 1.75vw;
 }
 
+.eddel-btn {
+    width: 35%;
+    font-size: 1.5vw;
+    font-weight: var(--medium);
+    border: var(--line);
+    background-color: var(--the-color);
+    color: var(--backgroung-color)
+}
+
+.eddel-btn:hover {
+    background-color: transparent;
+    color: var(--the-color);
+}
 /* blog post */
