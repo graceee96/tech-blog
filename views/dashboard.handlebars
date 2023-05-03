@@ -20,11 +20,11 @@
         </div>
     </div> --}}
 
-    <table id="my-posts" class="mt-5">
+    <table id="my-posts" class="mt-5 w-100">
         <tbody>
             {{#each user.blog_posts as |post|}}
             <tr class="one-post">
-                <td class="post-title px-3">
+                <td class="post-title">
                     <h4><a href="/blogpost/{{post.id}}">{{post.title}}</a></h4>
                 </td>
                 <td class="post-info">

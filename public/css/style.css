@@ -86,8 +86,8 @@ nav div {
 }
 
 .post-info {
-    /* border: 1px solid orange; */
-    width: 30%;
+    border: 1px solid orange;
+    width: 35%;
     text-align: end;
 }
 
