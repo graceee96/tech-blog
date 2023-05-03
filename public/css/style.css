@@ -184,13 +184,17 @@ nav div {
     font-size: 1.75vw;
 }
 
+.ae-title:focus, .ae-content:focus {
+    outline: none;
+}
+
 .eddel-btn {
     width: 35%;
     font-size: 1.5vw;
     font-weight: var(--medium);
     border: var(--line);
     background-color: var(--the-color);
-    color: var(--backgroung-color)
+    color: var(--backgroung-color);
 }
 
 .eddel-btn:hover {
@@ -215,12 +219,13 @@ nav div {
 
 #the-blogpost h3 {
     font-size: 2.8vw;
-    font-weight: var(--semibold);
+    font-weight: var(--bold);
 }
 
 #comment-list {
     /* border: 1px solid red; */
-    height: 30vw;
+    border-bottom: var(--line);
+    height: 35vw;
     overflow: hidden;
 }
 
@@ -229,14 +234,61 @@ nav div {
 }
 
 .one-comment {
-    border-bottom: var(--line);
+    border-top: var(--line);
+}
+
+.comment-content {
+    width: 75%;
 }
 
 .commenter {
     font-size: 1.8vw;
-    font-weight: var(--medium);
+    font-weight: var(--semibold);
 }
 
 .comment {
     font-size: 1.5vw;
+}
+
+.option-btns {
+    width: 25%;
+}
+
+.eddelcomment-btn, .postcomment-btn {
+    font-weight: var(--medium);
+    font-size: 1.35vw;
+    border: var(--line);
+    background-color: var(--the-color);
+    color: var(--backgroung-color);
+}
+
+.postcomment-btn {
+    width: 35%;
+    display: block;
+    margin: 0 auto;
+}
+
+.eddelcomment-btn:hover, .postcomment-btn:hover {
+    background-color: transparent;
+    color: var(--the-color);
+}
+
+.eddel-label {
+    font-weight: var(--medium);
+    font-size: 1.55vw;
+}
+
+.comment-text {
+    border: var(--line);
+    background-color: transparent;
+    font-size: 1.5vw;
+}
+
+.comment-text:focus {
+    outline:none;
+}
+
+.char-count {
+    font-size: 1.35vw;
+    font-weight: var(--light)
 }

@@ -9,30 +9,36 @@
 
     <div id="comment-list" class="p-3">
         <table class="w-100">
-            {{!-- <tbody>
+            {{!-- {{#if logged_in}} --}}
+            <tbody>
                 {{#each post.comments as |comment|}}
                 <tr class="one-comment">
-                    <td>
-                        <h5>{{comment.user.username}}</h5>
-                        <p>{{comment.comment}}</p>
+                    <td class="comment-content p-3">
+                        <h5 class="commenter">{{comment.user.username}}</h5>
+
+                        <p class="comment">{{comment.comment}}</p>
                     </td>
-                    <td class="d-flex flex-column">
-                        <button data-bs-toggle="collapse" data-bs-target="#editcomment-{{comment.id}}" aria-expanded="false" aria-controls="editComment">edit.</button>
-                        <button>delete.</button>
+                    <td class="option-btns p-3">
+                        <button class="eddelcomment-btn d-block w-100 p-1 mb-3" data-bs-toggle="collapse" data-bs-target="#editcomment-{{comment.id}}" aria-expanded="false" aria-controls="editComment">edit.</button>
+
+                        <button class="eddelcomment-btn d-block w-100 p-1">delete.</button>
                     </td>
                 </tr>
                 <tr class="collapse" id="editcomment-{{comment.id}}">
-                    <td class="w-100" colspan="2">
-                        <label for="comment-{{comment.id}}" class="d-block">↓ Edit comment here.</label>
-                        <textarea id="comment-{{comment.id}}" rows="6" class="d-block w-100">{{comment.comment}}</textarea>
-                        <p class="text-end mt-1"><span id="characters">255</span>/255 characters left</p>
-                        <button class="postcomment-btn">post comment.</button>
+                    <td class="w-100 p-3" colspan="2">
+                        <label for="comment-{{comment.id}}" class="eddel-label d-block mb-2">↓ Edit comment here.</label>
+
+                        <textarea id="comment-{{comment.id}}" rows="4" class="comment-text d-block w-100 p-3" wrap="hard">{{comment.comment}}</textarea>
+
+                        <p class="char-count text-end mt-2"><span id="characters">255</span>/255 characters left</p>
+
+                        <button class="postcomment-btn py-1 px-2">post comment.</button>
                     </td>
                 </tr>
                 {{/each}}
-            </tbody> --}}
+            </tbody>
 
-            {{!-- {{else}} --}}
+            {{!-- {{else}}
             <tbody>
                 {{#each post.comments as |comment|}}
                 <tr class="one-comment">
@@ -42,18 +48,21 @@
                     </td>
                 {{/each}}
             </tbody>
-            {{!-- {{/if}} --}}
+            {{/if}} --}}
         </table>
     </div>
 
     {{#if logged_in}}
     <button class="new-btn w-100 py-2" data-bs-toggle="collapse" data-bs-target="#new-comment" aria-expanded="false" aria-controls="new-comment">+ new comment</button>
 
-    <div class="collapse" id="new-comment">
-        <label for="">↓ Add new comment here.</label>
-        <textarea id="comment-{{comment.id}}" rows="6" class="d-block w-100"></textarea>
-        <h5 class="text-end mt-1"><span id="characters">255</span>/255 characters left</h5>
-        <button class="addcomment-btn">add comment.</button>
+    <div class="collapse p-3" id="new-comment">
+        <label for="comment-{{comment.id}}" class="eddel-label mb-2">↓ Add new comment here.</label>
+
+        <textarea id="comment-{{comment.id}}" rows="4" class="comment-text d-block w-100 p-3" wrap="hard"></textarea>
+
+        <p class="char-count text-end mt-2"><span id="characters">255</span>/255 characters left</p>
+
+        <button class="postcomment-btn py-1 px-2">add comment.</button>
     </div>
     {{/if}}
 </section>
