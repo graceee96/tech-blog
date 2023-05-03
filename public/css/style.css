@@ -188,19 +188,7 @@ nav div {
     outline: none;
 }
 
-.eddel-btn {
-    width: 35%;
-    font-size: 1.5vw;
-    font-weight: var(--medium);
-    border: var(--line);
-    background-color: var(--the-color);
-    color: var(--backgroung-color);
-}
 
-.eddel-btn:hover {
-    background-color: transparent;
-    color: var(--the-color);
-}
 
 /* blog post */
 .blog-title {
@@ -291,4 +279,18 @@ nav div {
 .char-count {
     font-size: 1.35vw;
     font-weight: var(--light)
+}
+
+.eddel-btn {
+    width: 95%;
+    font-size: 1.15vw;
+    font-weight: var(--medium);
+    border: var(--line);
+    background-color: var(--the-color);
+    color: var(--backgroung-color);
+}
+
+.eddel-btn:hover {
+    background-color: transparent;
+    color: var(--the-color);
 }

@@ -32,27 +32,6 @@ const editPost = async (event) => {
     }
 }
 
-// fetch request to delete post /api/blogposts/:id
-const deletePost = async(event) => {    
-    event.preventDefault();
-    console.log(event.target);
-
-    if (event.target.getAttribute('data-postid')) {
-        const id = event.target.getAttribute('data-postid');
-
-        const response = await fetch(`/api/blogposts/${id}`, {
-            method: 'DELETE',
-        });
-
-        if (response.ok) {
-            document.location.replace('/dashboard');
-        } else {
-            alert('Failed to delete project');
-        }
-    }
-}
-
-
 //event listener for character counter
 blogContent.addEventListener('input', () => {
     let charactersLeft = 255 - blogContent.value.length;
@@ -62,6 +41,3 @@ blogContent.addEventListener('input', () => {
 
 //event listener to edit post
 document.querySelector('.editpost-form').addEventListener('submit', editPost);
-
-//event listener to delete post
-document.querySelector('#deletepost-btn').addEventListener('click', deletePost)
