@@ -1,5 +1,5 @@
 <section id="edit-post" class="p-5">
-    <form class="editpost-form">
+    <form class="editpost-form" data-postid="{{post.id}}">
         <h2 class="mb-5 form-title">Edit your post here.</h2>
 
         <div class="mb-4">
@@ -13,7 +13,7 @@
             <h5 class="text-end mt-1"><span id="character"></span>/255 characters left</h5>
         </div>
 
-        <button id="editpost-btn" class="lisu-btn w-75 p-2 d-block mt-5 mx-auto" data-postid="{{post.id}}">edit post.</button>
+        <button id="editpost-btn" class="lisu-btn w-75 p-2 d-block mt-5 mx-auto" >edit post.</button>
     </form>
 </section>
 

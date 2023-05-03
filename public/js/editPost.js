@@ -10,12 +10,13 @@ const editPost = async (event) => {
 
     const title = document.querySelector('#editpost-title').value.trim();
     const content = document.querySelector('#editpost-content').value.trim();
+    console.log(event.target);
 
     if (event.target.getAttribute('data-postid')) {
         const id = event.target.getAttribute('data-postid');
         
         if (title && content) {
-            const response = await fetch('/api/blogposts/:id', {
+            const response = await fetch(`/api/blogposts/${id}`, {
                 method: 'PUT',
                 body: JSON.stringify({ title, content }),
                 headers: { 'Content-Type': 'application/json' },
