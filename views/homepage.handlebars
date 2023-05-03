@@ -4,10 +4,10 @@
         <tbody>
             {{#each posts as |post|}}
             <tr class="one-post">
-                <td class="post-title px-3 py-2">
+                <td class="post-title p-3">
                     <h2><a href="/blogpost/{{post.id}}">{{post.title}}</a></h2>
                 </td>
-                <td class="post-info w-100 h-100 px-3 py-2 d-flex flex-column">
+                <td class="post-info w-100 p-3 d-flex flex-column">
                     <p class="post-writer mb-1 w-100">{{post.user.username}}</p>
                     <p class="post-date mb-2 w-100">{{format_date post.date_created}}</p>
                 </td>

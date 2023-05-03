@@ -86,14 +86,17 @@ nav div {
 }
 
 .post-info {
-    border: 1px solid orange;
     width: 35%;
     text-align: end;
 }
 
 .post-info .post-writer {
     font-weight: var(--medium);
-    font-size: 1.5vw;
+    font-size: 1.6vw;
+}
+
+.post-info .post-date {
+    font-size: 1.4vw;
 }
 
 /* login/signup */
@@ -140,12 +143,25 @@ nav div {
 
 #dashboard h3 {
     font-size: 2.75vw;
+    font-weight: var(--medium);
+}
+
+.post-title2 {
+    width: 70%;;
+}
+
+.post-title2 h4 {
+    font-size: 2.5vw;
     font-weight: var(--semibold);
 }
 
-#my-posts h4 {
-    font-size: 2.5vw;
-    font-weight: var(--bold)
+.post-info2 {
+    width: 30%;
+}
+
+.post-date2 {
+    text-align: end;
+    font-size: 1.4vw;
 }
 
 .new-btn {
@@ -153,7 +169,7 @@ nav div {
     border: none;
     background-color: transparent;
     font-size: 2.75vw;
-    font-weight: var(--bold);
+    font-weight: var(--semibold);
 }
 
 .new-btn:hover {
