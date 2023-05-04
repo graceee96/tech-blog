@@ -11,6 +11,7 @@ const editComment = async (event) => {
 //fetch request to delete comment to /api/comments/:id
 const deleteComment = async (event) => {
     event.preventDefault();
+    console.log(event)
 }
 
 //event listener for adding comments

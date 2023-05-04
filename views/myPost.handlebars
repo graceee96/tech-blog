@@ -23,7 +23,7 @@
                 {{#each post.comments as |comment|}}
                 <tr class="one-comment">
                     <td class="p-3">
-                        <h5 class="commenter">{{comment.user.username}}</h5>
+                        <h5 class="commenter">{{comment.user.username}} <span class="comment-date">({{format_date comment.date_created}})</span></h5>
                         <p class="comment mb-0">{{comment.comment}}</p>
                     </td>
                 {{/each}}
