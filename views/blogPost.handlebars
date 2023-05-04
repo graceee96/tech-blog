@@ -30,9 +30,8 @@
 
                         <textarea id="comment-{{comment.id}}" rows="4" class="comment-text d-block w-100 p-3" wrap="hard">{{comment.comment}}</textarea>
 
-                        <p class="char-count text-end mt-2"><span id="characters">255</span>/255 characters left</p>
 
-                        <button class="postcomment-btn py-1 px-2">post comment.</button>
+                        <button class="postcomment-btn mt-4 mb-3 py-1 px-2">post comment.</button>
                     </td>
                 </tr>
                 {{/each}}
@@ -56,13 +55,11 @@
     <button class="new-btn w-100 py-2" data-bs-toggle="collapse" data-bs-target="#new-comment" aria-expanded="false" aria-controls="new-comment">+ new comment</button>
 
     <div class="collapse p-3" id="new-comment">
-        <label for="comment-{{comment.id}}" class="eddel-label mb-2">↓ Add new comment here.</label>
+        <label for="new-comment" class="eddel-label mb-2">↓ Add new comment here.</label>
 
-        <textarea id="comment-{{comment.id}}" rows="4" class="comment-text d-block w-100 p-3" wrap="hard"></textarea>
+        <textarea id="new-comment" rows="4" class="comment-text d-block w-100 p-3" wrap="hard"></textarea>
 
-        <p class="char-count text-end mt-2"><span class="characters">255</span>/255 characters left</p>
-
-        <button class="postcomment-btn py-1 px-2">add comment.</button>
+        <button class="postcomment-btn mt-4 py-1 px-2">add comment.</button>
     </div>
     {{/if}}
 </section>
