@@ -14,7 +14,7 @@
                 {{#each post.comments as |comment|}}
                 <tr class="one-comment">
                     <td class="comment-content p-3">
-                        <h5 class="commenter">{{comment.user.username}}</h5>
+                        <h5 class="commenter">{{comment.user.username}} <span class="comment-date">({{format_date comment.date_created}})</span></h5>
 
                         <p class="comment">{{comment.comment}}</p>
                     </td>
@@ -54,7 +54,7 @@
     {{#if logged_in}}
     <button class="new-btn w-100 py-2" data-bs-toggle="collapse" data-bs-target="#new-comment" aria-expanded="false" aria-controls="new-comment">+ new comment</button>
 
-    <div class="collapse p-3" id="new-comment">
+    <div class="newcomment-form collapse p-3" id="new-comment">
         <label for="new-comment" class="eddel-label mb-2">↓ Add new comment here.</label>
 
         <textarea id="new-comment" rows="4" class="comment-text d-block w-100 p-3" wrap="hard"></textarea>
