@@ -19,12 +19,19 @@ To start, users should create an account, or log in if they have existing accoun
 ### Screenshots of Application
 
 * Homepage
+![Screenshot of homepage](./public/assets/images/homepage-screenshot.png)
 
 * Dashboard
+![Screenshot of dashboard](./public/assets/images/dashboard-screenshot.png)
 
 * Blog Post with comments
+![Screenshot of blog post](./public/assets/images/blogpost-screenshot.png)
 
-## Credit
+## Credits
+
+Special thanks to Scott McAnally for helping!
+
+### Tutorials Referenced
 
 * priyansh70890 - [Word and Character Counter using HTML CSS and Javascript](https://www.geeksforgeeks.org/word-and-character-counter-using-html-css-and-javascript/)
 
