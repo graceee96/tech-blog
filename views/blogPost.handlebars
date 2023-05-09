@@ -9,45 +9,15 @@
 
     <div id="comment-list" class="p-3">
         <table class="w-100">
-            {{#if logged_in}}
-            <tbody>
-                {{#each post.comments as |comment|}}
-                <tr class="one-comment">
-                    <td class="comment-content p-3">
-                        <h5 class="commenter">{{comment.user.username}} <span class="comment-date">({{format_date comment.date_created}})</span></h5>
-
-                        <p class="comment">{{comment.comment}}</p>
-                    </td>
-                    <td class="option-btns p-3">
-                        <button class="eddelcomment-btn d-block w-100 p-1 mb-3" data-bs-toggle="collapse" data-bs-target="#editcomment-{{comment.id}}" aria-expanded="false" aria-controls="editComment" id="edit-btn">edit.</button>
-
-                        <button id="delete-btn" class="eddelcomment-btn d-block w-100 p-1" data-id="{{comment.id}}">delete.</button>
-                    </td>
-                </tr>
-                <tr class="collapse" id="editcomment-{{comment.id}}">
-                    <td class="editcomment-form w-100 p-3" colspan="2" data-commentid="{{comment.id}}">
-                        <label for="comment-{{comment.id}}" class="eddel-label d-block mb-2">↓ Edit comment here.</label>
-
-                        <textarea id="comment-{{comment.id}}" rows="4" class="comment-text d-block w-100 p-3" wrap="hard">{{comment.comment}}</textarea>
-
-
-                        <button class="postcomment-btn mt-4 mb-3 py-1 px-2">post comment.</button>
-                    </td>
-                </tr>
-                {{/each}}
-            </tbody>
-
-            {{else}}
             <tbody>
                 {{#each post.comments as |comment|}}
                 <tr class="one-comment">
                     <td class="p-3">
-                        <h5 class="commenter">{{comment.user.username}}</h5>
+                        <h5 class="commenter">{{comment.user.username}} <span class="comment-date">({{format_date comment.date_created}})</span></h5>
                         <p class="comment mb-0">{{comment.comment}}</p>
                     </td>
                 {{/each}}
             </tbody>
-            {{/if}}
         </table>
     </div>
 

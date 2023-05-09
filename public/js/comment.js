@@ -28,48 +28,48 @@ const addComment = async (event) => {
     }
 }
 
-//fetch request to update comment to /api/comments/:id
-const editComment = async (event) => {
+// //fetch request to update comment to /api/comments/:id
+// const editComment = async (event) => {
     
-    event.preventDefault();
-    console.log(event.target)
+//     event.preventDefault();
+//     console.log(event.target)
 
-    const commentBody = document.querySelector('#comment-30').value;
-    console.log(commentBody)
-}
+//     const commentBody = document.querySelector('#comment-30').value;
+//     console.log(commentBody)
+// }
 
-//fetch request to delete comment to /api/comments/:id
-const deleteComment = async (event) => {
-    // event.preventDefault();
-    console.log(event.target)
+// //fetch request to delete comment to /api/comments/:id
+// const deleteComment = async (event) => {
+//     // event.preventDefault();
+//     console.log(event.target)
 
-    // if (event.target.hasAttribute('data-id')) {
-        const id = event.target.getAttribute('data-id');
-        console.log(id)
+//     // if (event.target.hasAttribute('data-id')) {
+//         const id = event.target.getAttribute('data-id');
+//         console.log(id)
 
-        const response = await fetch(`/api/comments/${id}`, {
-            method: 'DELETE',
-            headers: { 'Content-Type': 'application/json' },
-        });
+//         const response = await fetch(`/api/comments/${id}`, {
+//             method: 'DELETE',
+//             headers: { 'Content-Type': 'application/json' },
+//         });
 
-        console.log(response);
-        // window.location.reload(true);
-        // history.go(0)
+//         console.log(response);
+//         // window.location.reload(true);
+//         // history.go(0)
         
-        if (response.ok) {
-            console.log('string deleted')
-            window.location.href = window.location.href
-        } else {
-            alert('Failed to delete comment')
-        }
-    // }
-}
+//         if (response.ok) {
+//             console.log('string deleted')
+//             window.location.href = window.location.href
+//         } else {
+//             alert('Failed to delete comment')
+//         }
+//     // }
+// }
 
 //event listener for adding comments
 document.querySelector('#addcomment-btn').addEventListener('click', addComment)
 
-//event listener for updating comments
-document.querySelector('#edit-btn').addEventListener('click', editComment)
+// //event listener for updating comments
+// document.querySelector('#edit-btn').addEventListener('click', editComment)
 
-//event listener for deleting comments
-document.querySelector('#delete-btn').addEventListener('click', deleteComment);
+// //event listener for deleting comments
+// document.querySelector('#delete-btn').addEventListener('click', deleteComment);
